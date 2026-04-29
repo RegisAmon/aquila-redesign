@@ -229,9 +229,22 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 768px) {
   .container-custom {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 48px;
+    padding-right: 48px;
   }
+}
+
+@media (min-width: 1280px) {
+  .container-custom {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+/* Section defaults — breathing room */
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 /* Gradient text */
