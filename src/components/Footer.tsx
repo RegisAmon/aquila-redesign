@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="bg-[#0A1628] text-white">
-      <div className="container-custom py-16 md:py-24">
+      <div className="container-custom py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
 
           {/* Col 1 - Brand */}

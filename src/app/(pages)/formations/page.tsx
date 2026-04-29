@@ -68,7 +68,7 @@ export default function FormationsPage() {
       <Navbar />
       <main>
         {/* HERO */}
-        <section className="pt-48 md:pt-44 pb-20 bg-[#0A1628] relative overflow-hidden">
+        <section className="pt-20 md:pt-20 pb-20 bg-[#0A1628] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           </div>
@@ -82,7 +82,7 @@ export default function FormationsPage() {
                 ECODIA France.
               </h1>
               <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
-                AQUILA – FORM'ACTION est un laboratoire de montée en compétences pour le chef d'entreprise et ses équipes. 
+                AQUILA – FORM'ACTION est un laboratoire de montée en compétences pour le chef d'entreprise et ses équipes.
                 Formations certifiantes prises en charge par les OPCO.
               </p>
             </motion.div>
@@ -90,7 +90,7 @@ export default function FormationsPage() {
         </section>
 
         {/* INTRO */}
-        <section className="py-12 md:py-16 bg-[var(--warm-white)]">
+        <section className="py-16 md:py-20 lg:py-24 bg-[var(--warm-white)]">
           <div className="container-custom">
             <motion.div
               className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"

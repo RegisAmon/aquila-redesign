@@ -62,7 +62,7 @@ export default function EtudesFinancieresPage() {
       <Navbar />
       <main>
         {/* HERO */}
-        <section className="pt-40 pb-20 bg-[var(--navy)] relative overflow-hidden">
+        <section className="pt-20 md:pt-24 pb-20 bg-[var(--navy)] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           </div>
@@ -84,7 +84,7 @@ export default function EtudesFinancieresPage() {
         </section>
 
         {/* POURQUOI */}
-        <section className="py-24 bg-[var(--warm-white)]">
+        <section className="py-16 md:py-20 lg:py-24 bg-[var(--warm-white)]">
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
@@ -114,7 +114,7 @@ export default function EtudesFinancieresPage() {
         </section>
 
         {/* MISSIONS */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-20 lg:py-24 bg-white">
           <div className="container-custom">
             <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
               <span className="text-[var(--gold)] text-sm uppercase tracking-[0.4em] font-semibold">Rôle</span>
@@ -134,7 +134,7 @@ export default function EtudesFinancieresPage() {
         </section>
 
         {/* HOLDING & FRANCHISE */}
-        <section className="py-24 bg-[var(--warm-white)]">
+        <section className="py-16 md:py-20 lg:py-24 bg-[var(--warm-white)]">
           <div className="container-custom">
             <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
               <span className="text-[var(--gold)] text-sm uppercase tracking-[0.4em] font-semibold">Expertise</span>
@@ -167,7 +167,7 @@ export default function EtudesFinancieresPage() {
         </section>
 
         {/* METHODE */}
-        <section className="py-24 bg-[var(--navy)]">
+        <section className="py-16 md:py-20 lg:py-24 bg-[var(--navy)]">
           <div className="container-custom">
             <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
               <span className="text-[var(--gold)] text-sm uppercase tracking-[0.4em] font-semibold">Méthode</span>
@@ -188,7 +188,7 @@ export default function EtudesFinancieresPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-24 bg-[var(--gold)]">
+        <section className="py-16 md:py-20 lg:py-24 bg-[var(--gold)]">
           <div className="container-custom text-center">
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <h2 className="font-heading text-4xl md:text-5xl font-semibold text-[var(--navy)] mb-6">Démarrez votre contrôle de gestion.</h2>

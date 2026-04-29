@@ -81,7 +81,7 @@ export default function StaffPage() {
       <Navbar />
       <main>
         {/* ═══════════════════════════════════════ HERO ═══════════════════════════════════════ */}
-        <section className="pt-48 md:pt-44 pb-20 bg-[var(--navy)] relative overflow-hidden">
+        <section className="pt-20 md:pt-24 pb-20 bg-[var(--navy)] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           </div>
@@ -147,7 +147,7 @@ export default function StaffPage() {
         </section>
 
         {/* ═══════════════════════════════════════ PARCOURS ═══════════════════════════════════════ */}
-        <section className="py-24 bg-[var(--warm-white)]">
+        <section className="py-16 md:py-20 lg:py-24 bg-[var(--warm-white)]">
           <div className="container-custom">
             <motion.div
               className="text-center mb-16"
@@ -189,7 +189,7 @@ export default function StaffPage() {
         </section>
 
         {/* ═══════════════════════════════════════ MISSIONS ═══════════════════════════════════════ */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-20 lg:py-24 bg-white">
           <div className="container-custom">
             <motion.div
               className="text-center mb-16"
@@ -230,7 +230,7 @@ export default function StaffPage() {
         </section>
 
         {/* ═══════════════════════════════════════ EXPERTISES ═══════════════════════════════════════ */}
-        <section className="py-24 bg-[var(--navy)]">
+        <section className="py-16 md:py-20 lg:py-24 bg-[var(--navy)]">
           <div className="container-custom">
             <motion.div
               className="text-center mb-16"
@@ -290,7 +290,7 @@ export default function StaffPage() {
         </section>
 
         {/* ═══════════════════════════════════════ CTA ═══════════════════════════════════════ */}
-        <section className="py-24 bg-[var(--gold)]">
+        <section className="py-16 md:py-20 lg:py-24 bg-[var(--gold)]">
           <div className="container-custom text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}

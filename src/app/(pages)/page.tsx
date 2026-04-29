@@ -8,12 +8,14 @@ import { ArrowRight, ChevronDown, TrendingUp, Shield, BookOpen, Users, Target, B
 import { Navbar, Footer } from '@/components';
 
 function useCountUp(end: number, duration: number = 2000) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(end); // SSR = final value; animates to 0 on mount then counts up
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const started = useRef(false);
 
   useEffect(() => {
+    // Reset to 0 on first view, then animate
+    setCount(0);
     if (isInView && !started.current) {
       started.current = true;
       let startTime: number;
@@ -110,7 +112,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         {/* ═══════════════════════════════════════ HERO ═══════════════════════════════════════ */}
-        <section className="relative min-h-screen flex items-center justify-center bg-[#0A1628] overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center pt-32 pb-24 md:pt-40 md:pb-32 bg-[#0A1628] overflow-hidden">
           {/* Background pattern */}
           <div className="absolute inset-0 opacity-5">
             <div
@@ -132,7 +134,7 @@ export default function HomePage() {
           />
 
           {/* Content */}
-          <div className="container-custom relative z-10 pt-48 md:pt-44 pb-24">
+          <div className="container-custom relative z-10 pb-24">
             <div className="max-w-4xl">
               {/* Pre-title */}
               <motion.div
@@ -218,7 +220,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ POLES ═══════════════════════════════════════ */}
-        <section className="py-16 md:py-20 lg:py-28 bg-[var(--warm-white)]">
+        <section className="py-20 md:py-28 bg-[var(--warm-white)]">
           <div className="container-custom">
             <motion.div
               className="text-center mb-16"
@@ -273,7 +275,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ ABOUT RONNEL ═══════════════════════════════════════ */}
-        <section className="py-16 md:py-20 lg:py-28 bg-[#0A1628] relative overflow-hidden">
+        <section className="py-20 md:py-28 bg-[#0A1628] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div
               style={{
@@ -343,9 +345,9 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ KPIs ═══════════════════════════════════════ */}
-        <section className="py-24 bg-[var(--gold)]">
+        <section className="py-16 md:py-20 bg-[var(--gold)]">
           <div className="container-custom">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16">
               <KPICard value={150} suffix="+" label="Entreprises accompagnées" />
               <KPICard value={10} suffix="+" label="Années d'expertise" />
               <KPICard value={50} suffix="+" label="Formations dispensées" />
@@ -355,7 +357,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ EXPERTISES ═══════════════════════════════════════ */}
-        <section className="py-16 md:py-20 lg:py-28 bg-[var(--warm-white)]">
+        <section className="py-20 md:py-28 bg-[var(--warm-white)]">
           <div className="container-custom">
             <motion.div
               className="text-center mb-16"
@@ -401,7 +403,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ FORMATIONS ═══════════════════════════════════════ */}
-        <section className="py-16 md:py-20 lg:py-28 bg-white">
+        <section className="py-20 md:py-28 bg-white">
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div
@@ -466,7 +468,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ CTA ═══════════════════════════════════════ */}
-        <section className="py-16 md:py-20 lg:py-28 bg-[#0A1628] relative overflow-hidden">
+        <section className="py-24 md:py-32 bg-[#0A1628] relative overflow-hidden">
           <div className="absolute inset-0 opacity-5">
             <div
               style={{
