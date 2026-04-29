@@ -78,7 +78,7 @@ export default function FormationsPage() {
                 <span className="w-10 h-[1px] bg-[#B8860B]" />
                 <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em]">Formation professionnelle</span>
               </div>
-              <h1 className="font-heading text-5xl md:text-7xl font-semibold text-white mb-6">
+              <h1 className="font-heading text-5xl md:text-7xl font-semibold text-white mb-8">
                 ECODIA France.
               </h1>
               <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
@@ -104,13 +104,13 @@ export default function FormationsPage() {
                 { icon: <Users size={24} />, title: 'Opco & financement', desc: 'Prise en charge possible via votre OPCO' },
                 { icon: <Target size={24} />, title: 'Sur mesure', desc: 'Formation commandée par l\'entreprise pour ses salariés' },
               ].map((item) => (
-                <motion.div key={item.title} variants={fadeUp} className="flex items-start gap-4 bg-white p-8">
+                <motion.div key={item.title} variants={fadeUp} className="flex items-start gap-4 bg-white p-10">
                   <div className="w-12 h-12 bg-[#B8860B] flex items-center justify-center text-[#0A1628] shrink-0">
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold text-[#0A1628]">{item.title}</h3>
-                    <p className="text-[#334155] text-sm mt-1">{item.desc}</p>
+                    <h3 className="font-heading text-lg font-semibold text-[#0A1628] mt-1">{item.title}</h3>
+                    <p className="text-[#334155] text-sm mt-2">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -134,7 +134,7 @@ export default function FormationsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-[#F8F6F3] p-8 group hover:shadow-xl transition-all duration-500"
+                  className="bg-[#F8F6F3] p-10 group hover:shadow-xl transition-all duration-500"
                 >
                   <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                     {/* Left */}

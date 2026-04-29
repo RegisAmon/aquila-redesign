@@ -36,7 +36,7 @@ function KPICard({ value, suffix = '', label }: { value: number; suffix?: string
   const { count, ref } = useCountUp(value);
   return (
     <div ref={ref} className="text-center group">
-      <div className="font-mono text-5xl md:text-6xl font-bold text-[#0A1628] mb-2">
+      <div className="font-mono text-5xl md:text-6xl font-bold text-[#0A1628] mb-6">
         {count}{suffix}
       </div>
       <div className="text-[#0A1628]/60 text-sm uppercase tracking-widest">{label}</div>
@@ -150,7 +150,7 @@ export default function HomePage() {
 
               {/* Main title */}
               <motion.h1
-                className="font-heading text-4xl md:text-7xl lg:text-8xl font-semibold text-white leading-[0.95] mb-8"
+                className="font-heading text-4xl md:text-7xl lg:text-8xl font-semibold text-white leading-[0.95] mb-12"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: loaded ? 1 : 0, y: loaded ? 0 : 40 }}
                 transition={{ duration: 1, delay: 0.4 }}
@@ -164,7 +164,7 @@ export default function HomePage() {
 
               {/* Subtitle */}
               <motion.p
-                className="text-white/80 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed"
+                className="text-white/80 text-lg md:text-xl max-w-2xl mb-14 leading-relaxed"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: loaded ? 1 : 0, y: loaded ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -231,10 +231,10 @@ export default function HomePage() {
               <motion.span variants={fadeUp} className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">
                 Nos pôles
               </motion.span>
-              <motion.h2 variants={fadeUp} className="section-title mt-6">
+              <motion.h2 variants={fadeUp} className="section-title mt-8">
                 Ce que nous faisons.
               </motion.h2>
-              <motion.p variants={fadeUp} className="section-subtitle mx-auto mt-6">
+              <motion.p variants={fadeUp} className="section-subtitle mx-auto mt-8">
                 Trois expertises complémentaires pour accompagner les entreprises à chaque étape de leur développement.
               </motion.p>
             </motion.div>
@@ -259,7 +259,7 @@ export default function HomePage() {
                     <h3 className="font-heading text-2xl font-semibold text-[#0A1628] mb-4">
                       {pole.title}
                     </h3>
-                    <p className="text-[#334155] leading-relaxed mb-6">
+                    <p className="text-[#334155] leading-relaxed mb-10">
                       {pole.desc}
                     </p>
                     <div className="flex items-center gap-2 text-[#B8860B] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -316,18 +316,18 @@ export default function HomePage() {
                 <motion.span variants={fadeUp} className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">
                   Le fondateur
                 </motion.span>
-                <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-semibold text-white mt-4 mb-6">
+                <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-semibold text-white mt-8 mb-8">
                   FALANA Ronnel
                 </motion.h2>
-                <motion.p variants={fadeUp} className="text-white/50 text-sm uppercase tracking-widest mb-8">
+                <motion.p variants={fadeUp} className="text-white/50 text-sm uppercase tracking-widest mb-12">
                   Economiste d'entreprise · Consultant & Formateur certifié
                 </motion.p>
-                <motion.p variants={fadeUp} className="text-white/70 leading-relaxed mb-6">
+                <motion.p variants={fadeUp} className="text-white/70 leading-relaxed mb-10">
                   Économiste d'entreprise et enseignant à l'université de Lyon, 
                   Ronnel FALANA accompagne les dirigeants de PME/PMI et ETI depuis plus de 10 ans 
                   dans leurs projets de transformation et de croissance.
                 </motion.p>
-                <motion.p variants={fadeUp} className="text-white/70 leading-relaxed mb-8">
+                <motion.p variants={fadeUp} className="text-white/70 leading-relaxed mb-10">
                   Son approche : intervenir directement auprès du CoDir ou du COMEX pour 
                   co-construire la stratégie d'entreprise, assurer sa mise en œuvre 
                   et piloter le contrôle de gestion.
@@ -346,7 +346,7 @@ export default function HomePage() {
         {/* ═══════════════════════════════════════ KPIs ═══════════════════════════════════════ */}
         <section className="py-12 md:py-16 lg:py-20 bg-[#B8860B]">
           <div className="container-custom">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-20">
               <KPICard value={150} suffix="+" label="Entreprises accompagnées" />
               <KPICard value={10} suffix="+" label="Années d'expertise" />
               <KPICard value={50} suffix="+" label="Formations dispensées" />
@@ -368,7 +368,7 @@ export default function HomePage() {
               <motion.span variants={fadeUp} className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">
                 Expertises
               </motion.span>
-              <motion.h2 variants={fadeUp} className="section-title mt-4">
+              <motion.h2 variants={fadeUp} className="section-title mt-8">
                 Nos savoir-faire.
               </motion.h2>
             </motion.div>
@@ -382,12 +382,12 @@ export default function HomePage() {
             >
               {expertises.map((exp) => (
                 <motion.div key={exp.title} variants={fadeUp}>
-                  <div className="flex gap-6 group p-6 bg-white border border-black/5">
+                  <div className="flex gap-6 group p-8 bg-white border border-black/5">
                     <div className="w-14 h-14 bg-[#0A1628] flex items-center justify-center text-[#B8860B] shrink-0 group-hover:bg-[#B8860B] group-hover:text-[#0A1628] transition-all duration-300">
                       {exp.icon}
                     </div>
                     <div>
-                      <h3 className="font-heading text-xl font-semibold text-[#0A1628] mb-2">
+                      <h3 className="font-heading text-xl font-semibold text-[#0A1628] mb-4">
                         {exp.title}
                       </h3>
                       <p className="text-[#334155] text-sm leading-relaxed">
@@ -414,15 +414,15 @@ export default function HomePage() {
                 <motion.span variants={fadeUp} className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">
                   Formation
                 </motion.span>
-                <motion.h2 variants={fadeUp} className="section-title mt-4 mb-6">
+                <motion.h2 variants={fadeUp} className="section-title mt-8 mb-8">
                   ECODIA France.
                 </motion.h2>
-                <motion.p variants={fadeUp} className="text-[#334155] leading-relaxed mb-6">
+                <motion.p variants={fadeUp} className="text-[#334155] leading-relaxed mb-8">
                   AQUILA – FORM'ACTION est un véritable laboratoire de montée en compétences 
                   pour le chef d'entreprise et ses équipes. Formations au pilotage financier, 
                   management stratégique et leadership.
                 </motion.p>
-                <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mb-8">
+                <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mb-12">
                   {['Pilotage financier', 'Management stratégique', 'Techniques managériales', 'Leadership'].map((tag) => (
                     <span key={tag} className="px-4 py-2 bg-[#F8F6F3] text-[#0A1628] text-xs font-medium tracking-wide">
                       {tag}
@@ -440,7 +440,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.9 }}
-                className="bg-[#0A1628] p-8 md:p-10 lg:p-12"
+                className="bg-[#0A1628] p-10 md:p-14"
               >
                 <div className="space-y-8">
                   {[
@@ -487,10 +487,10 @@ export default function HomePage() {
             <motion.span variants={fadeUp} className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">
               Prêt à avancer ?
             </motion.span>
-            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-6xl font-semibold text-white mt-4 mb-6">
+            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-6xl font-semibold text-white mt-8 mb-8">
               Parlons de votre projet.
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-white/80 text-lg max-w-2xl mx-auto mb-10">
+            <motion.p variants={fadeUp} className="text-white/80 text-lg max-w-2xl mx-auto mb-14">
               Que vous ayez besoin d'un diagnostic, d'un accompagnement en contrôle de gestion 
               ou d'une formation sur mesure, nous sommes là pour vous aider.
             </motion.p>
