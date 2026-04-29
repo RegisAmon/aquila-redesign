@@ -219,10 +219,10 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ POLES ═══════════════════════════════════════ */}
-        <section className="py-20 md:py-28 bg-[#F8F6F3]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#F8F6F3]">
           <div className="container-custom">
             <motion.div
-              className="text-center mb-16"
+              className="text-center mb-12"
               variants={stagger}
               initial="hidden"
               whileInView="visible"
@@ -240,7 +240,7 @@ export default function HomePage() {
             </motion.div>
 
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
+              className="grid grid-cols-1 md:grid-cols-3 gap-8"
               variants={stagger}
               initial="hidden"
               whileInView="visible"
@@ -250,7 +250,7 @@ export default function HomePage() {
                 <motion.div key={pole.title} variants={fadeUp}>
                   <Link
                     href={pole.href}
-                    className="group block bg-white p-8 md:p-10 lg:p-12 h-full transition-all duration-500 border border-black/5 hover:shadow-xl hover:border-black/10"
+                    className="group block bg-white p-8 h-full transition-all duration-500 border border-black/5 hover:shadow-xl hover:border-black/10"
                     style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
                   >
                     <div className="w-16 h-16 bg-[#0A1628] flex items-center justify-center mb-8 text-[#B8860B] transition-all duration-300 group-hover:bg-[#B8860B] group-hover:text-[#0A1628]">
@@ -274,7 +274,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ ABOUT RONNEL ═══════════════════════════════════════ */}
-        <section className="py-20 md:py-28 bg-[#0A1628] relative overflow-hidden">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#0A1628] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div
               style={{
@@ -285,7 +285,7 @@ export default function HomePage() {
           </div>
 
           <div className="container-custom relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Image */}
               <motion.div
                 initial={{ opacity: 0, x: -60 }}
@@ -344,9 +344,9 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ KPIs ═══════════════════════════════════════ */}
-        <section className="py-16 md:py-20 bg-[#B8860B]">
+        <section className="py-12 md:py-16 lg:py-20 bg-[#B8860B]">
           <div className="container-custom">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16">
               <KPICard value={150} suffix="+" label="Entreprises accompagnées" />
               <KPICard value={10} suffix="+" label="Années d'expertise" />
               <KPICard value={50} suffix="+" label="Formations dispensées" />
@@ -356,10 +356,10 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ EXPERTISES ═══════════════════════════════════════ */}
-        <section className="py-20 md:py-28 bg-[#F8F6F3]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#F8F6F3]">
           <div className="container-custom">
             <motion.div
-              className="text-center mb-16"
+              className="text-center mb-12"
               variants={stagger}
               initial="hidden"
               whileInView="visible"
@@ -374,7 +374,7 @@ export default function HomePage() {
             </motion.div>
 
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 gap-8"
               variants={stagger}
               initial="hidden"
               whileInView="visible"
@@ -382,7 +382,7 @@ export default function HomePage() {
             >
               {expertises.map((exp) => (
                 <motion.div key={exp.title} variants={fadeUp}>
-                  <div className="flex gap-6 group">
+                  <div className="flex gap-6 group p-6 bg-white border border-black/5">
                     <div className="w-14 h-14 bg-[#0A1628] flex items-center justify-center text-[#B8860B] shrink-0 group-hover:bg-[#B8860B] group-hover:text-[#0A1628] transition-all duration-300">
                       {exp.icon}
                     </div>
@@ -402,9 +402,9 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ FORMATIONS ═══════════════════════════════════════ */}
-        <section className="py-20 md:py-28 bg-white">
+        <section className="py-16 md:py-24 lg:py-32 bg-white">
           <div className="container-custom">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -440,7 +440,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.9 }}
-                className="bg-[#0A1628] p-10 md:p-14"
+                className="bg-[#0A1628] p-8 md:p-10 lg:p-12"
               >
                 <div className="space-y-8">
                   {[
@@ -467,7 +467,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ CTA ═══════════════════════════════════════ */}
-        <section className="py-24 md:py-32 bg-[#0A1628] relative overflow-hidden">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#0A1628] relative overflow-hidden">
           <div className="absolute inset-0 opacity-5">
             <div
               style={{

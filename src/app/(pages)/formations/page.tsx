@@ -68,7 +68,7 @@ export default function FormationsPage() {
       <Navbar />
       <main>
         {/* HERO */}
-        <section className="pt-20 lg:pt-32 pb-16 lg:pb-24 bg-[#0A1628] relative overflow-hidden">
+        <section className="pt-20 lg:pt-32 pb-12 md:pb-16 lg:pb-20 bg-[#0A1628] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           </div>
@@ -90,10 +90,10 @@ export default function FormationsPage() {
         </section>
 
         {/* INTRO */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[#F8F6F3]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#F8F6F3]">
           <div className="container-custom">
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
+              className="grid grid-cols-1 md:grid-cols-3 gap-8"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -104,7 +104,7 @@ export default function FormationsPage() {
                 { icon: <Users size={24} />, title: 'Opco & financement', desc: 'Prise en charge possible via votre OPCO' },
                 { icon: <Target size={24} />, title: 'Sur mesure', desc: 'Formation commandée par l\'entreprise pour ses salariés' },
               ].map((item) => (
-                <motion.div key={item.title} variants={fadeUp} className="flex items-start gap-4 bg-white p-8 md:p-10">
+                <motion.div key={item.title} variants={fadeUp} className="flex items-start gap-4 bg-white p-8">
                   <div className="w-12 h-12 bg-[#B8860B] flex items-center justify-center text-[#0A1628] shrink-0">
                     {item.icon}
                   </div>
@@ -119,14 +119,14 @@ export default function FormationsPage() {
         </section>
 
         {/* CATALOGUE */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 lg:py-32 bg-white">
           <div className="container-custom">
-            <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+            <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
               <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">Catalogue</span>
               <h2 className="section-title mt-4">Nos actions de formations.</h2>
             </motion.div>
 
-            <div className="space-y-6 md:space-y-8">
+            <div className="space-y-8">
               {formations.map((formation, i) => (
                 <motion.div
                   key={formation.code}
@@ -134,7 +134,7 @@ export default function FormationsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-[#F8F6F3] p-8 md:p-10 group hover:shadow-xl transition-all duration-500"
+                  className="bg-[#F8F6F3] p-8 group hover:shadow-xl transition-all duration-500"
                 >
                   <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                     {/* Left */}
@@ -181,7 +181,7 @@ export default function FormationsPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-24 bg-[#0A1628]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#0A1628]">
           <div className="container-custom text-center">
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <BookOpen size={40} className="text-[#B8860B] mx-auto mb-6" />
@@ -189,7 +189,7 @@ export default function FormationsPage() {
               <p className="text-white/60 text-lg max-w-xl mx-auto mb-10">Discutons de votre projet de formation et des possibilité de prise en charge avec votre OPCO.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="btn-gold text-sm">Demander un devis <ArrowRight size={16} /></Link>
-                <a href="tel:+33752243929" className="btn-primary text-sm">Appeler au 07 52 24 39 29</a>
+                <a href="tel:+337****3929" className="btn-primary text-sm">Appeler au 07 52 24 39 29</a>
               </div>
             </motion.div>
           </div>

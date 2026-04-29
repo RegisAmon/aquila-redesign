@@ -62,7 +62,7 @@ export default function EtudesFinancieresPage() {
       <Navbar />
       <main>
         {/* HERO */}
-        <section className="pt-20 lg:pt-32 pb-16 lg:pb-24 bg-[#0A1628] relative overflow-hidden">
+        <section className="pt-20 lg:pt-32 pb-12 md:pb-16 lg:pb-20 bg-[#0A1628] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           </div>
@@ -114,16 +114,16 @@ export default function EtudesFinancieresPage() {
         </section>
 
         {/* MISSIONS */}
-        <section className="py-16 md:py-20 lg:py-24 bg-white">
+        <section className="py-16 md:py-24 lg:py-32 bg-white">
           <div className="container-custom">
-            <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+            <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
               <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">Rôle</span>
               <h2 className="section-title mt-4">À quoi sert concrètement<br />le contrôle de gestion ?</h2>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {missions.map((m, i) => (
                 <motion.div key={m} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
-                  <div className="flex items-start gap-4 p-6 bg-[#F8F6F3] h-full group hover:bg-[#0A1628] transition-all duration-500">
+                  <div className="flex items-start gap-4 p-8 bg-[#F8F6F3] h-full group hover:bg-[#0A1628] transition-all duration-500">
                     <span className="font-mono text-[#B8860B] text-xs font-bold mt-1">{(i + 1).toString().padStart(2, '0')}</span>
                     <p className="text-[var(--text-primary)] text-sm group-hover:text-white/80 transition-colors leading-relaxed">{m}</p>
                   </div>
@@ -134,9 +134,9 @@ export default function EtudesFinancieresPage() {
         </section>
 
         {/* HOLDING & FRANCHISE */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[#F8F6F3]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#F8F6F3]">
           <div className="container-custom">
-            <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+            <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
               <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">Expertise</span>
               <h2 className="section-title mt-4">Holding & Franchise.</h2>
             </motion.div>
@@ -146,7 +146,7 @@ export default function EtudesFinancieresPage() {
                 { icon: <Users size={28} />, title: 'Pour les Franchiseurs', points: franchises, color: 'bg-[#B8860B]' },
               ].map((bloc) => (
                 <motion.div key={bloc.title} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
-                  <div className="bg-white p-10 h-full">
+                  <div className="bg-white p-8 h-full">
                     <div className={`w-16 h-16 ${bloc.color} flex items-center justify-center mb-8 text-white`}>
                       {bloc.icon}
                     </div>
@@ -167,16 +167,16 @@ export default function EtudesFinancieresPage() {
         </section>
 
         {/* METHODE */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[#0A1628]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#0A1628]">
           <div className="container-custom">
-            <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+            <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
               <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">Méthode</span>
               <h2 className="font-heading text-4xl md:text-5xl font-semibold text-white mt-4">Notre façon de travailler.</h2>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {etapes.map((etape, i) => (
                 <motion.div key={etape.numero} initial={{ opacity: 0, x: i === 0 ? -40 : 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
-                  <div className="bg-[#1E3A5F] p-10 h-full relative overflow-hidden group hover:bg-[#B8860B] transition-all duration-500">
+                  <div className="bg-[#1E3A5F] p-8 h-full relative overflow-hidden group hover:bg-[#B8860B] transition-all duration-500">
                     <span className="font-mono text-7xl font-bold text-white/5 absolute top-4 right-6">{etape.numero}</span>
                     <h3 className="font-heading text-2xl font-semibold text-white mb-4 group-hover:text-[#0A1628] transition-colors">{etape.title}</h3>
                     <p className="text-white/60 text-sm leading-relaxed group-hover:text-[#0A1628]/70 transition-colors">{etape.desc}</p>
@@ -188,7 +188,7 @@ export default function EtudesFinancieresPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[#B8860B]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#B8860B]">
           <div className="container-custom text-center">
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <h2 className="font-heading text-4xl md:text-5xl font-semibold text-[#0A1628] mb-6">Démarrez votre contrôle de gestion.</h2>
