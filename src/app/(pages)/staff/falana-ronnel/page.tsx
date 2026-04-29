@@ -81,20 +81,20 @@ export default function StaffPage() {
       <Navbar />
       <main>
         {/* ═══════════════════════════════════════ HERO ═══════════════════════════════════════ */}
-        <section className="pt-20 md:pt-24 pb-20 bg-[#0A1628] relative overflow-hidden">
+        <section className="pt-20 lg:pt-32 pb-12 md:pb-16 lg:pb-20 bg-[#0A1628] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           </div>
 
           <div className="container-custom relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-end">
               {/* Text */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: loaded ? 1 : 0, y: loaded ? 0 : 40 }}
                 transition={{ duration: 0.9 }}
               >
-                <motion.div className="flex items-center gap-3 mb-6"
+                <motion.div className="flex items-center gap-3 mb-8"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: loaded ? 1 : 0, x: loaded ? 0 : -20 }}
                   transition={{ delay: 0.2 }}
@@ -103,13 +103,13 @@ export default function StaffPage() {
                   <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em]">Fondateur & Dirigeant</span>
                 </motion.div>
 
-                <h1 className="font-heading text-5xl md:text-7xl font-semibold text-white mb-4">
+                <h1 className="font-heading text-5xl md:text-7xl font-semibold text-white mb-8">
                   FALANA Ronnel
                 </h1>
-                <p className="text-[#B8860B] text-lg font-medium mb-6">
+                <p className="text-[#B8860B] text-lg font-medium mb-8">
                   Economiste d'entreprise · Consultant & Formateur certifié
                 </p>
-                <p className="text-white/60 leading-relaxed mb-8">
+                <p className="text-white/60 leading-relaxed mb-12">
                   Économiste d'entreprise et enseignant à l'université de Lyon. J'accompagne les dirigeants 
                   de PME/PMI et ETI dans leurs projets de transformation, de croissance et de pilotage stratégique.
                 </p>
@@ -119,7 +119,7 @@ export default function StaffPage() {
                     Prendre rendez-vous
                     <ArrowRight size={16} />
                   </Link>
-                  <a href="tel:+33752243929" className="btn-primary text-sm">
+                  <a href="tel:+337****3929" className="btn-primary text-sm">
                     (+33) 07 52 24 39 29
                   </a>
                 </div>
@@ -147,24 +147,24 @@ export default function StaffPage() {
         </section>
 
         {/* ═══════════════════════════════════════ PARCOURS ═══════════════════════════════════════ */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[#F8F6F3]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#F8F6F3]">
           <div className="container-custom">
             <motion.div
-              className="text-center mb-16"
+              className="text-center mb-12"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={stagger}
             >
               <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">Parcours</span>
-              <h2 className="section-title mt-4">Mon histoire.</h2>
+              <h2 className="section-title mt-8">Mon histoire.</h2>
             </motion.div>
 
             <div className="max-w-3xl mx-auto">
               {parcours.map((item, i) => (
                 <motion.div
                   key={item.year}
-                  className="relative pl-8 pb-12 last:pb-0"
+                  className="relative pl-8 pb-10 last:pb-0"
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -189,17 +189,17 @@ export default function StaffPage() {
         </section>
 
         {/* ═══════════════════════════════════════ MISSIONS ═══════════════════════════════════════ */}
-        <section className="py-16 md:py-20 lg:py-24 bg-white">
+        <section className="py-16 md:py-24 lg:py-32 bg-white">
           <div className="container-custom">
             <motion.div
-              className="text-center mb-16"
+              className="text-center mb-12"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={stagger}
             >
               <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">Types de missions</span>
-              <h2 className="section-title mt-4">Comment j'interviens.</h2>
+              <h2 className="section-title mt-8">Comment j'interviens.</h2>
             </motion.div>
 
             <motion.div
@@ -211,13 +211,13 @@ export default function StaffPage() {
             >
               {missions.map((mission) => (
                 <motion.div key={mission.title} variants={fadeUp}>
-                  <div className="bg-[#F8F6F3] p-10 h-full group hover:shadow-xl transition-all duration-500">
+                  <div className="bg-[#F8F6F3] p-10 h-full group hover:shadow-xl transition-all duration-500 flex flex-col">
                     <div className={`w-16 h-16 ${mission.color} flex items-center justify-center mb-8 text-white`}>
                       {mission.icon}
                     </div>
-                    <h3 className="font-heading text-2xl font-semibold text-[#0A1628] mb-2">{mission.title}</h3>
+                    <h3 className="font-heading text-2xl font-semibold text-[#0A1628] mb-4">{mission.title}</h3>
                     <p className="text-[#B8860B] text-xs font-mono uppercase tracking-wider mb-4">{mission.target}</p>
-                    <p className="text-[#334155] text-sm leading-relaxed mb-6">{mission.desc}</p>
+                    <p className="text-[#334155] text-sm leading-relaxed mb-8 flex-1">{mission.desc}</p>
                     <div className="flex items-center gap-2 text-[#0A1628] text-xs font-medium pt-4 border-t border-[#0A1628]/10">
                       <Clock size={14} />
                       <span>{mission.billing}</span>
@@ -230,17 +230,17 @@ export default function StaffPage() {
         </section>
 
         {/* ═══════════════════════════════════════ EXPERTISES ═══════════════════════════════════════ */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[#0A1628]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#0A1628]">
           <div className="container-custom">
             <motion.div
-              className="text-center mb-16"
+              className="text-center mb-12"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={stagger}
             >
               <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">Expertises</span>
-              <h2 className="font-heading text-4xl md:text-5xl font-semibold text-white mt-4">Mes champs d'expertise.</h2>
+              <h2 className="font-heading text-4xl md:text-5xl font-semibold text-white mt-8">Mes champs d'expertise.</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -251,11 +251,11 @@ export default function StaffPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="flex items-center gap-3 mb-8">
+                <div className="flex items-center gap-3 mb-10">
                   <BarChart3 size={24} className="text-[#B8860B]" />
                   <h3 className="font-heading text-2xl font-semibold text-white">Dimension financière</h3>
                 </div>
-                <ul className="space-y-4">
+                <ul className="space-y-5">
                   {expertisesFinancieres.map((exp) => (
                     <li key={exp} className="flex items-start gap-3 text-white/70">
                       <CheckCircle size={18} className="text-[#B8860B] shrink-0 mt-0.5" />
@@ -272,11 +272,11 @@ export default function StaffPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <div className="flex items-center gap-3 mb-8">
+                <div className="flex items-center gap-3 mb-10">
                   <TrendingUp size={24} className="text-[#B8860B]" />
                   <h3 className="font-heading text-2xl font-semibold text-white">Dimension économique</h3>
                 </div>
-                <ul className="space-y-4">
+                <ul className="space-y-5">
                   {expertisesEconomiques.map((exp) => (
                     <li key={exp} className="flex items-start gap-3 text-white/70">
                       <CheckCircle size={18} className="text-[#B8860B] shrink-0 mt-0.5" />
@@ -290,7 +290,7 @@ export default function StaffPage() {
         </section>
 
         {/* ═══════════════════════════════════════ CTA ═══════════════════════════════════════ */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[#B8860B]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#B8860B]">
           <div className="container-custom text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -298,10 +298,10 @@ export default function StaffPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <h2 className="font-heading text-4xl md:text-5xl font-semibold text-[#0A1628] mb-6">
+              <h2 className="font-heading text-4xl md:text-5xl font-semibold text-[#0A1628] mb-8">
                 Besoin d'échanger ?
               </h2>
-              <p className="text-[#0A1628]/70 text-lg max-w-xl mx-auto mb-10">
+              <p className="text-[#0A1628]/70 text-lg max-w-xl mx-auto mb-12">
                 Consultations ponctuelles sur des questions bien spécifiques liées à la stratégie, 
                 la finance d'entreprise ou le juridique.
               </p>

@@ -42,17 +42,17 @@ export default function StrategieJuridiquePage() {
       <Navbar />
       <main>
         {/* HERO */}
-        <section className="pt-20 lg:pt-32 pb-16 lg:pb-24 bg-[#0A1628] relative overflow-hidden">
+        <section className="pt-20 lg:pt-32 pb-12 md:pb-16 lg:pb-20 bg-[#0A1628] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           </div>
           <div className="container-custom relative z-10">
             <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-8">
                 <span className="w-10 h-[1px] bg-[#B8860B]" />
                 <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em]">Stratégie juridique</span>
               </div>
-              <h1 className="font-heading text-5xl md:text-7xl font-semibold text-white mb-6">
+              <h1 className="font-heading text-5xl md:text-7xl font-semibold text-white mb-8">
                 Stratégie juridique.
               </h1>
               <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
@@ -64,7 +64,7 @@ export default function StrategieJuridiquePage() {
         </section>
 
         {/* INTRO */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[#F8F6F3]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#F8F6F3]">
           <div className="container-custom">
             <motion.div
               className="max-w-3xl mx-auto text-center"
@@ -74,7 +74,7 @@ export default function StrategieJuridiquePage() {
               variants={stagger}
             >
               <h2 className="section-title mb-8">🤔 Votre stratégie juridique ?</h2>
-              <div className="space-y-4 text-[#334155] leading-relaxed text-left bg-white p-10">
+              <div className="space-y-5 text-[#334155] leading-relaxed text-left bg-white p-10">
                 {[
                   '🚀 Vous avez un business plan avec une stratégie de développement',
                   '👨‍💻 Vous avez une roadmap produit ou service',
@@ -84,7 +84,7 @@ export default function StrategieJuridiquePage() {
                 ].map((item) => (
                   <p key={item} className="text-base">{item}</p>
                 ))}
-                <p className="text-[#0A1628] font-medium pt-4 border-t border-[#B8860B]/30">
+                <p className="text-[#0A1628] font-medium pt-6 border-t border-[#B8860B]/30">
                   Votre stratégie juridique est une stratégie comme les autres au service de votre entreprise. 
                   Anticipez vos besoins en les inscrivant dans une roadmap juridique.
                 </p>
@@ -94,14 +94,14 @@ export default function StrategieJuridiquePage() {
         </section>
 
         {/* ETAPES */}
-        <section className="py-16 md:py-20 lg:py-24 bg-white">
+        <section className="py-16 md:py-24 lg:py-32 bg-white">
           <div className="container-custom">
-            <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+            <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
               <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">Notre méthode</span>
-              <h2 className="section-title mt-4">Détermination de la stratégie juridique.</h2>
+              <h2 className="section-title mt-8">Détermination de la stratégie juridique.</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {etapes.map((etape, i) => (
                 <motion.div
                   key={etape.title}
@@ -109,14 +109,14 @@ export default function StrategieJuridiquePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-[#F8F6F3] p-8 group hover:bg-[#0A1628] transition-all duration-500"
+                  className="bg-[#F8F6F3] p-10 group hover:bg-[#0A1628] transition-all duration-500 flex flex-col"
                 >
-                  <div className="w-14 h-14 bg-[#B8860B] flex items-center justify-center mb-6 text-[#0A1628]">
+                  <div className="w-14 h-14 bg-[#B8860B] flex items-center justify-center mb-8 text-[#0A1628]">
                     {etape.icon}
                   </div>
-                  <span className="font-mono text-[#B8860B] text-xs font-bold">{(i + 1).toString().padStart(2, '0')}</span>
-                  <h3 className="font-heading text-xl font-semibold text-[#0A1628] mt-2 mb-3 group-hover:text-white transition-colors">{etape.title}</h3>
-                  <p className="text-[#334155] text-sm leading-relaxed group-hover:text-white/70 transition-colors">{etape.desc}</p>
+                  <span className="font-mono text-[#B8860B] text-xs font-bold mb-4">{(i + 1).toString().padStart(2, '0')}</span>
+                  <h3 className="font-heading text-xl font-semibold text-[#0A1628] mb-4 group-hover:text-white transition-colors">{etape.title}</h3>
+                  <p className="text-[#334155] text-sm leading-relaxed flex-1 group-hover:text-white/70 transition-colors">{etape.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -124,10 +124,10 @@ export default function StrategieJuridiquePage() {
         </section>
 
         {/* DOMAINES */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[#0A1628]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#0A1628]">
           <div className="container-custom">
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+              className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -135,7 +135,7 @@ export default function StrategieJuridiquePage() {
             >
               <div>
                 <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">Domaines</span>
-                <h2 className="font-heading text-4xl md:text-5xl font-semibold text-white mt-4 mb-6">
+                <h2 className="font-heading text-4xl md:text-5xl font-semibold text-white mt-8 mb-8">
                   Notre champ d'intervention.
                 </h2>
                 <p className="text-white/60 leading-relaxed">
@@ -156,11 +156,11 @@ export default function StrategieJuridiquePage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[#B8860B]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#B8860B]">
           <div className="container-custom text-center">
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <h2 className="font-heading text-4xl md:text-5xl font-semibold text-[#0A1628] mb-6">Faites le point sur vos besoins juridiques.</h2>
-              <p className="text-[#0A1628]/70 text-lg max-w-xl mx-auto mb-10">Un audit juridique en amont peut vous éviter bien des surprises. Discutons de votre situation.</p>
+              <h2 className="font-heading text-4xl md:text-5xl font-semibold text-[#0A1628] mb-8">Faites le point sur vos besoins juridiques.</h2>
+              <p className="text-[#0A1628]/70 text-lg max-w-xl mx-auto mb-12">Un audit juridique en amont peut vous éviter bien des surprises. Discutons de votre situation.</p>
               <Link href="/contact" className="btn-primary text-sm inline-flex items-center gap-2">
                 Contactez-nous <ArrowRight size={16} />
               </Link>

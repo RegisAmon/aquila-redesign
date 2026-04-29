@@ -25,7 +25,7 @@ export default function ContactPage() {
       <Navbar />
       <main>
         {/* HERO */}
-        <section className="pt-20 md:pt-24 pb-16 bg-[#0A1628] relative overflow-hidden">
+        <section className="pt-20 lg:pt-32 pb-12 md:pb-16 lg:pb-20 bg-[#0A1628] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           </div>
@@ -38,7 +38,7 @@ export default function ContactPage() {
         </section>
 
         {/* CONTACT CONTENT */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[#F8F6F3]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#F8F6F3]">
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
 

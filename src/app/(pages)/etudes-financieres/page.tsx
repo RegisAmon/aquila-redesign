@@ -84,7 +84,7 @@ export default function EtudesFinancieresPage() {
         </section>
 
         {/* POURQUOI */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[#F8F6F3]">
+        <section className="py-16 md:py-24 lg:py-32 bg-[#F8F6F3]">
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
