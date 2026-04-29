@@ -250,19 +250,19 @@ export default function HomePage() {
                 <motion.div key={pole.title} variants={fadeUp}>
                   <Link
                     href={pole.href}
-                    className="group block bg-white p-8 h-full transition-all duration-500 border border-black/5 hover:shadow-xl hover:border-black/10"
+                    className="group block bg-white p-10 h-full transition-all duration-500 border border-black/5 hover:shadow-xl hover:border-black/10 flex flex-col"
                     style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
                   >
-                    <div className="w-16 h-16 bg-[#0A1628] flex items-center justify-center mb-8 text-[#B8860B] transition-all duration-300 group-hover:bg-[#B8860B] group-hover:text-[#0A1628]">
+                    <div className="w-16 h-16 bg-[#0A1628] flex items-center justify-center mb-10 text-[#B8860B] transition-all duration-300 group-hover:bg-[#B8860B] group-hover:text-[#0A1628]">
                       {pole.icon}
                     </div>
-                    <h3 className="font-heading text-2xl font-semibold text-[#0A1628] mb-4">
+                    <h3 className="font-heading text-2xl font-semibold text-[#0A1628] mb-6">
                       {pole.title}
                     </h3>
-                    <p className="text-[#334155] leading-relaxed mb-10">
+                    <p className="text-[#334155] leading-relaxed mb-10 flex-1">
                       {pole.desc}
                     </p>
-                    <div className="flex items-center gap-2 text-[#B8860B] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-2 text-[#B8860B] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-auto">
                       <span>En savoir plus</span>
                       <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -382,7 +382,7 @@ export default function HomePage() {
             >
               {expertises.map((exp) => (
                 <motion.div key={exp.title} variants={fadeUp}>
-                  <div className="flex gap-6 group p-8 bg-white border border-black/5">
+                  <div className="flex gap-6 group p-10 bg-white border border-black/5 flex-col">
                     <div className="w-14 h-14 bg-[#0A1628] flex items-center justify-center text-[#B8860B] shrink-0 group-hover:bg-[#B8860B] group-hover:text-[#0A1628] transition-all duration-300">
                       {exp.icon}
                     </div>
