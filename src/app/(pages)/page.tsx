@@ -36,10 +36,10 @@ function KPICard({ value, suffix = '', label }: { value: number; suffix?: string
   const { count, ref } = useCountUp(value);
   return (
     <div ref={ref} className="text-center group">
-      <div className="font-mono text-5xl md:text-6xl font-bold text-[var(--navy)] mb-2">
+      <div className="font-mono text-5xl md:text-6xl font-bold text-[#0A1628] mb-2">
         {count}{suffix}
       </div>
-      <div className="text-[var(--navy)]/60 text-sm uppercase tracking-widest">{label}</div>
+      <div className="text-[#0A1628]/60 text-sm uppercase tracking-widest">{label}</div>
     </div>
   );
 }
@@ -125,7 +125,7 @@ export default function HomePage() {
 
           {/* Gold accent line */}
           <motion.div
-            className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-[var(--gold)] via-[var(--gold)] to-transparent"
+            className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-[#B8860B] via-[#B8860B] to-transparent"
             initial={{ scaleY: 0 }}
             animate={{ scaleY: loaded ? 1 : 0 }}
             transition={{ duration: 1.2, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -142,8 +142,8 @@ export default function HomePage() {
                 animate={{ opacity: loaded ? 1 : 0, x: loaded ? 0 : -30 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <span className="w-12 h-[1px] bg-[var(--gold)]" />
-                <span className="text-[var(--gold)] text-sm uppercase tracking-[0.4em] font-medium">
+                <span className="w-12 h-[1px] bg-[#B8860B]" />
+                <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-medium">
                   PME · ETI · Startups
                 </span>
               </motion.div>
@@ -214,12 +214,12 @@ export default function HomePage() {
             animate={{ opacity: loaded ? 0.05 : 0, scale: loaded ? 1 : 0.8 }}
             transition={{ duration: 1.5, delay: 1 }}
           >
-            <div className="w-full h-full border border-[var(--gold)] rounded-full" />
+            <div className="w-full h-full border border-[#B8860B] rounded-full" />
           </motion.div>
         </section>
 
         {/* ═══════════════════════════════════════ POLES ═══════════════════════════════════════ */}
-        <section className="py-20 md:py-28 bg-[var(--warm-white)]">
+        <section className="py-20 md:py-28 bg-[#F8F6F3]">
           <div className="container-custom">
             <motion.div
               className="text-center mb-16"
@@ -228,7 +228,7 @@ export default function HomePage() {
               whileInView="visible"
               viewport={{ once: true, margin: '-100px' }}
             >
-              <motion.span variants={fadeUp} className="text-[var(--gold)] text-sm uppercase tracking-[0.4em] font-semibold">
+              <motion.span variants={fadeUp} className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">
                 Nos pôles
               </motion.span>
               <motion.h2 variants={fadeUp} className="section-title mt-6">
@@ -253,16 +253,16 @@ export default function HomePage() {
                     className="group block bg-white p-8 md:p-10 lg:p-12 h-full transition-all duration-500 border border-black/5 hover:shadow-xl hover:border-black/10"
                     style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
                   >
-                    <div className="w-16 h-16 bg-[#0A1628] flex items-center justify-center mb-8 text-[var(--gold)] transition-all duration-300 group-hover:bg-[var(--gold)] group-hover:text-[var(--navy)]">
+                    <div className="w-16 h-16 bg-[#0A1628] flex items-center justify-center mb-8 text-[#B8860B] transition-all duration-300 group-hover:bg-[#B8860B] group-hover:text-[#0A1628]">
                       {pole.icon}
                     </div>
-                    <h3 className="font-heading text-2xl font-semibold text-[var(--navy)] mb-4">
+                    <h3 className="font-heading text-2xl font-semibold text-[#0A1628] mb-4">
                       {pole.title}
                     </h3>
-                    <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
+                    <p className="text-[#334155] leading-relaxed mb-6">
                       {pole.desc}
                     </p>
-                    <div className="flex items-center gap-2 text-[var(--gold)] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-2 text-[#B8860B] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span>En savoir plus</span>
                       <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -302,7 +302,7 @@ export default function HomePage() {
                     className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
                   />
                   {/* Gold frame accent */}
-                  <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-[var(--gold)] -z-10" />
+                  <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-[#B8860B] -z-10" />
                 </div>
               </motion.div>
 
@@ -313,7 +313,7 @@ export default function HomePage() {
                 viewport={{ once: true, margin: '-100px' }}
                 variants={stagger}
               >
-                <motion.span variants={fadeUp} className="text-[var(--gold)] text-sm uppercase tracking-[0.4em] font-semibold">
+                <motion.span variants={fadeUp} className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">
                   Le fondateur
                 </motion.span>
                 <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-semibold text-white mt-4 mb-6">
@@ -344,7 +344,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ KPIs ═══════════════════════════════════════ */}
-        <section className="py-16 md:py-20 bg-[var(--gold)]">
+        <section className="py-16 md:py-20 bg-[#B8860B]">
           <div className="container-custom">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16">
               <KPICard value={150} suffix="+" label="Entreprises accompagnées" />
@@ -356,7 +356,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════ EXPERTISES ═══════════════════════════════════════ */}
-        <section className="py-20 md:py-28 bg-[var(--warm-white)]">
+        <section className="py-20 md:py-28 bg-[#F8F6F3]">
           <div className="container-custom">
             <motion.div
               className="text-center mb-16"
@@ -365,7 +365,7 @@ export default function HomePage() {
               whileInView="visible"
               viewport={{ once: true, margin: '-100px' }}
             >
-              <motion.span variants={fadeUp} className="text-[var(--gold)] text-sm uppercase tracking-[0.4em] font-semibold">
+              <motion.span variants={fadeUp} className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">
                 Expertises
               </motion.span>
               <motion.h2 variants={fadeUp} className="section-title mt-4">
@@ -383,14 +383,14 @@ export default function HomePage() {
               {expertises.map((exp) => (
                 <motion.div key={exp.title} variants={fadeUp}>
                   <div className="flex gap-6 group">
-                    <div className="w-14 h-14 bg-[#0A1628] flex items-center justify-center text-[var(--gold)] shrink-0 group-hover:bg-[var(--gold)] group-hover:text-[var(--navy)] transition-all duration-300">
+                    <div className="w-14 h-14 bg-[#0A1628] flex items-center justify-center text-[#B8860B] shrink-0 group-hover:bg-[#B8860B] group-hover:text-[#0A1628] transition-all duration-300">
                       {exp.icon}
                     </div>
                     <div>
-                      <h3 className="font-heading text-xl font-semibold text-[var(--navy)] mb-2">
+                      <h3 className="font-heading text-xl font-semibold text-[#0A1628] mb-2">
                         {exp.title}
                       </h3>
-                      <p className="text-[var(--text-secondary)] text-sm leading-relaxed">
+                      <p className="text-[#334155] text-sm leading-relaxed">
                         {exp.desc}
                       </p>
                     </div>
@@ -411,20 +411,20 @@ export default function HomePage() {
                 viewport={{ once: true, margin: '-100px' }}
                 variants={stagger}
               >
-                <motion.span variants={fadeUp} className="text-[var(--gold)] text-sm uppercase tracking-[0.4em] font-semibold">
+                <motion.span variants={fadeUp} className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">
                   Formation
                 </motion.span>
                 <motion.h2 variants={fadeUp} className="section-title mt-4 mb-6">
                   ECODIA France.
                 </motion.h2>
-                <motion.p variants={fadeUp} className="text-[var(--text-secondary)] leading-relaxed mb-6">
+                <motion.p variants={fadeUp} className="text-[#334155] leading-relaxed mb-6">
                   AQUILA – FORM'ACTION est un véritable laboratoire de montée en compétences 
                   pour le chef d'entreprise et ses équipes. Formations au pilotage financier, 
                   management stratégique et leadership.
                 </motion.p>
                 <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mb-8">
                   {['Pilotage financier', 'Management stratégique', 'Techniques managériales', 'Leadership'].map((tag) => (
-                    <span key={tag} className="px-4 py-2 bg-[var(--warm-white)] text-[var(--navy)] text-xs font-medium tracking-wide">
+                    <span key={tag} className="px-4 py-2 bg-[#F8F6F3] text-[#0A1628] text-xs font-medium tracking-wide">
                       {tag}
                     </span>
                   ))}
@@ -451,7 +451,7 @@ export default function HomePage() {
                   ].map((formation) => (
                     <div key={formation.code} className="flex items-center justify-between border-b border-white/10 pb-6 last:border-0 last:pb-0">
                       <div>
-                        <span className="text-[var(--gold)] text-xs font-mono">{formation.code}</span>
+                        <span className="text-[#B8860B] text-xs font-mono">{formation.code}</span>
                         <p className="text-white font-medium mt-1">{formation.title}</p>
                       </div>
                       <div className="text-right">
@@ -484,7 +484,7 @@ export default function HomePage() {
             viewport={{ once: true, margin: '-100px' }}
             variants={stagger}
           >
-            <motion.span variants={fadeUp} className="text-[var(--gold)] text-sm uppercase tracking-[0.4em] font-semibold">
+            <motion.span variants={fadeUp} className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">
               Prêt à avancer ?
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-6xl font-semibold text-white mt-4 mb-6">

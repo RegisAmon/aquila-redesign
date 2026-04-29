@@ -38,14 +38,14 @@ export default function Navbar() {
         <div className="container-custom flex justify-end items-center gap-6 py-2 text-sm text-white/70">
           <a
             href="tel:+33752243929"
-            className="flex items-center gap-2 hover:text-[var(--gold)] transition-colors"
+            className="flex items-center gap-2 hover:text-[#B8860B] transition-colors"
           >
             <Phone size={14} />
             (+33) 07 52 24 39 29
           </a>
           <a
             href="mailto:aquila@aquila-consulting.com"
-            className="flex items-center gap-2 hover:text-[var(--gold)] transition-colors"
+            className="flex items-center gap-2 hover:text-[#B8860B] transition-colors"
           >
             <Mail size={14} />
             aquila@aquila-consulting.com
@@ -58,8 +58,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-[var(--gold)] flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-              <span className="font-heading text-xl font-bold text-[var(--navy)]">A</span>
+            <div className="w-10 h-10 bg-[#B8860B] flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+              <span className="font-heading text-xl font-bold text-[#0A1628]">A</span>
             </div>
             <div className="hidden sm:block">
               <span className="font-heading text-xl font-semibold text-white tracking-wide">
@@ -80,7 +80,7 @@ export default function Navbar() {
                 className="relative text-sm text-white/80 hover:text-white font-medium tracking-wide transition-colors duration-300 group"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[var(--gold)] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#B8860B] transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>
@@ -119,7 +119,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-white/80 hover:text-[var(--gold)] text-lg font-medium transition-colors"
+                className="text-white/80 hover:text-[#B8860B] text-lg font-medium transition-colors"
               >
                 {link.label}
               </Link>

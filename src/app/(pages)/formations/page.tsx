@@ -75,8 +75,8 @@ export default function FormationsPage() {
           <div className="container-custom relative z-10">
             <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-10 h-[1px] bg-[var(--gold)]" />
-                <span className="text-[var(--gold)] text-sm uppercase tracking-[0.4em]">Formation professionnelle</span>
+                <span className="w-10 h-[1px] bg-[#B8860B]" />
+                <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em]">Formation professionnelle</span>
               </div>
               <h1 className="font-heading text-5xl md:text-7xl font-semibold text-white mb-6">
                 ECODIA France.
@@ -90,7 +90,7 @@ export default function FormationsPage() {
         </section>
 
         {/* INTRO */}
-        <section className="py-16 md:py-20 lg:py-24 bg-[var(--warm-white)]">
+        <section className="py-16 md:py-20 lg:py-24 bg-[#F8F6F3]">
           <div className="container-custom">
             <motion.div
               className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
@@ -105,12 +105,12 @@ export default function FormationsPage() {
                 { icon: <Target size={24} />, title: 'Sur mesure', desc: 'Formation commandée par l\'entreprise pour ses salariés' },
               ].map((item) => (
                 <motion.div key={item.title} variants={fadeUp} className="flex items-start gap-4 bg-white p-8 md:p-10">
-                  <div className="w-12 h-12 bg-[var(--gold)] flex items-center justify-center text-[var(--navy)] shrink-0">
+                  <div className="w-12 h-12 bg-[#B8860B] flex items-center justify-center text-[#0A1628] shrink-0">
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold text-[var(--navy)]">{item.title}</h3>
-                    <p className="text-[var(--text-secondary)] text-sm mt-1">{item.desc}</p>
+                    <h3 className="font-heading text-lg font-semibold text-[#0A1628]">{item.title}</h3>
+                    <p className="text-[#334155] text-sm mt-1">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -122,7 +122,7 @@ export default function FormationsPage() {
         <section className="py-24 bg-white">
           <div className="container-custom">
             <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-              <span className="text-[var(--gold)] text-sm uppercase tracking-[0.4em] font-semibold">Catalogue</span>
+              <span className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">Catalogue</span>
               <h2 className="section-title mt-4">Nos actions de formations.</h2>
             </motion.div>
 
@@ -134,27 +134,27 @@ export default function FormationsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-[var(--warm-white)] p-8 md:p-10 group hover:shadow-xl transition-all duration-500"
+                  className="bg-[#F8F6F3] p-8 md:p-10 group hover:shadow-xl transition-all duration-500"
                 >
                   <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                     {/* Left */}
                     <div className="lg:w-48 shrink-0">
-                      <span className="font-mono text-[var(--gold)] text-xs font-bold tracking-wider">{formation.code}</span>
+                      <span className="font-mono text-[#B8860B] text-xs font-bold tracking-wider">{formation.code}</span>
                       <div className="mt-2">
-                        <span className="font-heading text-3xl font-semibold text-[var(--navy)]">{formation.price}</span>
-                        <span className="text-[var(--text-secondary)] text-sm ml-2">/ {formation.hours}</span>
+                        <span className="font-heading text-3xl font-semibold text-[#0A1628]">{formation.price}</span>
+                        <span className="text-[#334155] text-sm ml-2">/ {formation.hours}</span>
                       </div>
-                      <p className="text-[var(--text-secondary)] text-xs mt-1">{formation.public}</p>
+                      <p className="text-[#334155] text-xs mt-1">{formation.public}</p>
                     </div>
 
                     {/* Middle */}
                     <div className="flex-1">
-                      <h3 className="font-heading text-xl font-semibold text-[var(--navy)] mb-4">{formation.title}</h3>
+                      <h3 className="font-heading text-xl font-semibold text-[#0A1628] mb-4">{formation.title}</h3>
                       <div className={`space-y-2 ${formation.long ? 'grid grid-cols-1 md:grid-cols-2 gap-2' : ''}`}>
                         {formation.moduleLabels.map((label, j) => (
                           <div key={j} className="flex items-start gap-2">
-                            <CheckCircle size={14} className="text-[var(--gold)] shrink-0 mt-0.5" />
-                            <span className="text-[var(--text-secondary)] text-xs leading-relaxed">{label}</span>
+                            <CheckCircle size={14} className="text-[#B8860B] shrink-0 mt-0.5" />
+                            <span className="text-[#334155] text-xs leading-relaxed">{label}</span>
                           </div>
                         ))}
                       </div>
@@ -167,7 +167,7 @@ export default function FormationsPage() {
                         <ArrowRight size={14} />
                       </Link>
                       {formation.pdf && (
-                        <a href={formation.pdf} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[var(--navy)] text-xs font-medium hover:text-[var(--gold)] transition-colors">
+                        <a href={formation.pdf} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#0A1628] text-xs font-medium hover:text-[#B8860B] transition-colors">
                           <Download size={14} />
                           Télécharger le programme
                         </a>
@@ -184,7 +184,7 @@ export default function FormationsPage() {
         <section className="py-24 bg-[#0A1628]">
           <div className="container-custom text-center">
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <BookOpen size={40} className="text-[var(--gold)] mx-auto mb-6" />
+              <BookOpen size={40} className="text-[#B8860B] mx-auto mb-6" />
               <h2 className="font-heading text-4xl md:text-5xl font-semibold text-white mb-6">Montez en compétences.</h2>
               <p className="text-white/60 text-lg max-w-xl mx-auto mb-10">Discutons de votre projet de formation et des possibilité de prise en charge avec votre OPCO.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

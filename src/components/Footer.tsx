@@ -10,8 +10,8 @@ export default function Footer() {
           {/* Col 1 - Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-[var(--gold)] flex items-center justify-center">
-                <span className="font-heading text-xl font-bold text-[var(--navy)]">A</span>
+              <div className="w-10 h-10 bg-[#B8860B] flex items-center justify-center">
+                <span className="font-heading text-xl font-bold text-[#0A1628]">A</span>
               </div>
               <div>
                 <span className="font-heading text-xl font-semibold text-white tracking-wide">AQUILA</span>
@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <a
                 href="mailto:aquila@aquila-consulting.com"
-                className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-[var(--gold)] hover:border-[var(--gold)] transition-all duration-300"
+                className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-[#B8860B] hover:border-[#B8860B] transition-all duration-300"
                 aria-label="Email"
               >
                 <Mail size={18} />
@@ -35,7 +35,7 @@ export default function Footer() {
 
           {/* Col 2 - Navigation */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-6 text-[var(--gold)]">Navigation</h4>
+            <h4 className="font-heading text-lg font-semibold mb-6 text-[#B8860B]">Navigation</h4>
             <ul className="space-y-3">
               {[
                 { href: '/', label: 'Accueil' },
@@ -48,7 +48,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/60 hover:text-[var(--gold)] text-sm transition-colors duration-300"
+                    className="text-white/60 hover:text-[#B8860B] text-sm transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Col 3 - Services */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-6 text-[var(--gold)]">Nos expertises</h4>
+            <h4 className="font-heading text-lg font-semibold mb-6 text-[#B8860B]">Nos expertises</h4>
             <ul className="space-y-3">
               {[
                 'Diagnostic stratégique',
@@ -78,18 +78,18 @@ export default function Footer() {
 
           {/* Col 4 - Contact */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-6 text-[var(--gold)]">Contact</h4>
+            <h4 className="font-heading text-lg font-semibold mb-6 text-[#B8860B]">Contact</h4>
             <div className="space-y-4">
               <a
                 href="tel:+33752243929"
-                className="flex items-start gap-3 text-white/60 hover:text-[var(--gold)] text-sm transition-colors group"
+                className="flex items-start gap-3 text-white/60 hover:text-[#B8860B] text-sm transition-colors group"
               >
                 <Phone size={16} className="mt-0.5 shrink-0" />
                 <span>(+33) 07 52 24 39 29</span>
               </a>
               <a
                 href="mailto:aquila@aquila-consulting.com"
-                className="flex items-start gap-3 text-white/60 hover:text-[var(--gold)] text-sm transition-colors"
+                className="flex items-start gap-3 text-white/60 hover:text-[#B8860B] text-sm transition-colors"
               >
                 <Mail size={16} className="mt-0.5 shrink-0" />
                 <span>aquila@aquila-consulting.com</span>
