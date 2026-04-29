@@ -29,12 +29,12 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[var(--navy)]/95 backdrop-blur-md shadow-2xl'
+          ? 'bg-[#0A1628]/95 backdrop-blur-md shadow-2xl'
           : 'bg-transparent'
       }`}
     >
       {/* Top bar */}
-      <div className="hidden md:block bg-[var(--navy)] border-b border-white/10">
+      <div className="hidden lg:block bg-[#0A1628] border-b border-white/10">
         <div className="container-custom flex justify-end items-center gap-6 py-2 text-sm text-white/70">
           <a
             href="tel:+33752243929"
@@ -55,7 +55,7 @@ export default function Navbar() {
 
       {/* Main nav */}
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-10 h-10 bg-[var(--gold)] flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
@@ -112,7 +112,7 @@ export default function Navbar() {
           mobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="bg-[var(--navy)] border-t border-white/10 px-6 py-8">
+        <div className="bg-[#0A1628] border-t border-white/10 px-6 py-8 pt-16">
           <div className="flex flex-col gap-6">
             {navLinks.map((link) => (
               <Link

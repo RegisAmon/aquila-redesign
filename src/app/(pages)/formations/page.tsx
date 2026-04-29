@@ -68,7 +68,7 @@ export default function FormationsPage() {
       <Navbar />
       <main>
         {/* HERO */}
-        <section className="pt-40 pb-20 bg-[var(--navy)] relative overflow-hidden">
+        <section className="pt-48 md:pt-44 pb-20 bg-[#0A1628] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           </div>
@@ -90,10 +90,10 @@ export default function FormationsPage() {
         </section>
 
         {/* INTRO */}
-        <section className="py-16 bg-[var(--warm-white)]">
+        <section className="py-12 md:py-16 bg-[var(--warm-white)]">
           <div className="container-custom">
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -104,7 +104,7 @@ export default function FormationsPage() {
                 { icon: <Users size={24} />, title: 'Opco & financement', desc: 'Prise en charge possible via votre OPCO' },
                 { icon: <Target size={24} />, title: 'Sur mesure', desc: 'Formation commandée par l\'entreprise pour ses salariés' },
               ].map((item) => (
-                <motion.div key={item.title} variants={fadeUp} className="flex items-start gap-4 bg-white p-6">
+                <motion.div key={item.title} variants={fadeUp} className="flex items-start gap-4 bg-white p-8 md:p-10">
                   <div className="w-12 h-12 bg-[var(--gold)] flex items-center justify-center text-[var(--navy)] shrink-0">
                     {item.icon}
                   </div>
@@ -126,7 +126,7 @@ export default function FormationsPage() {
               <h2 className="section-title mt-4">Nos actions de formations.</h2>
             </motion.div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               {formations.map((formation, i) => (
                 <motion.div
                   key={formation.code}
@@ -181,7 +181,7 @@ export default function FormationsPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-24 bg-[var(--navy)]">
+        <section className="py-24 bg-[#0A1628]">
           <div className="container-custom text-center">
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <BookOpen size={40} className="text-[var(--gold)] mx-auto mb-6" />

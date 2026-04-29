@@ -81,7 +81,7 @@ export default function StaffPage() {
       <Navbar />
       <main>
         {/* ═══════════════════════════════════════ HERO ═══════════════════════════════════════ */}
-        <section className="pt-40 pb-20 bg-[var(--navy)] relative overflow-hidden">
+        <section className="pt-48 md:pt-44 pb-20 bg-[var(--navy)] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           </div>

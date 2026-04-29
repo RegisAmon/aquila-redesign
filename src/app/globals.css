@@ -6,13 +6,13 @@
   /* Palette */
   --color-navy: #0A1628;
   --color-navy-light: #1E3A5F;
-  --color-gold: #C9A84C;
-  --color-gold-light: #D4B86A;
+  --color-gold: #B8860B;
+  --color-gold-light: #D4A520;
   --color-warm-white: #F8F6F3;
   --color-off-white: #FFFFFF;
-  --color-text-primary: #1A1A1A;
-  --color-text-secondary: #4B5563;
-  --color-text-muted: #9CA3AF;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #334155;
+  --color-text-muted: #475569;
   --color-border: rgba(0, 0, 0, 0.08);
 
   /* Typography */

@@ -25,14 +25,14 @@ export default function ContactPage() {
       <Navbar />
       <main>
         {/* HERO */}
-        <section className="pt-40 pb-16 bg-[var(--navy)] relative overflow-hidden">
+        <section className="pt-48 md:pt-44 pb-16 bg-[var(--navy)] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           </div>
           <div className="container-custom relative z-10">
             <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
               <h1 className="font-heading text-5xl md:text-7xl font-semibold text-white mb-4">Nous contacter.</h1>
-              <p className="text-white/60 text-lg max-w-xl">Parlons de votre projet, de vos besoins en conseil ou en formation.</p>
+              <p className="text-white/80 text-lg max-w-xl">Parlons de votre projet, de vos besoins en conseil ou en formation.</p>
             </motion.div>
           </div>
         </section>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                     <div className="w-10 h-10 bg-[var(--gold)] flex items-center justify-center">
                       <MapPin size={18} className="text-[var(--navy)]" />
                     </div>
-                    <span className="text-[var(--gold)] text-sm uppercase tracking-widest font-semibold">Nos bureaux</span>
+                    <span className="text-[var(--navy)] text-sm uppercase tracking-widest font-semibold">Nos bureaux</span>
                   </div>
                   <div className="space-y-4">
                     <div className="bg-white p-6">
@@ -100,7 +100,7 @@ export default function ContactPage() {
 
                 {/* Info footer */}
                 <div className="bg-[var(--navy)] p-8">
-                  <p className="text-white/50 text-xs leading-relaxed">
+                  <p className="text-white/70 text-xs leading-relaxed">
                     <span className="text-white font-semibold">AQUILA Etudes & Consulting</span><br />
                     Marque de FSC France (Consulting et formation)<br />
                     SIRET : 899 281 554 000 35<br />
