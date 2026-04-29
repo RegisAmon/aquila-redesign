@@ -163,7 +163,7 @@ export default function HomePage() {
 
               {/* Subtitle */}
               <motion.p
-                className="text-white/60 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed"
+                className="text-white/80 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: loaded ? 1 : 0, y: loaded ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -249,8 +249,8 @@ export default function HomePage() {
                 <motion.div key={pole.title} variants={fadeUp}>
                   <Link
                     href={pole.href}
-                    className="group block bg-white p-10 h-full transition-all duration-500 hover:shadow-2xl"
-                    style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}
+                    className="group block bg-white p-10 h-full transition-all duration-500 border border-black/5 hover:shadow-xl hover:border-black/10"
+                    style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
                   >
                     <div className="w-16 h-16 bg-[var(--navy)] flex items-center justify-center mb-8 text-[var(--gold)] transition-all duration-300 group-hover:bg-[var(--gold)] group-hover:text-[var(--navy)]">
                       {pole.icon}
@@ -489,7 +489,7 @@ export default function HomePage() {
             <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-6xl font-semibold text-white mt-4 mb-6">
               Parlons de votre projet.
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-white/60 text-lg max-w-2xl mx-auto mb-10">
+            <motion.p variants={fadeUp} className="text-white/80 text-lg max-w-2xl mx-auto mb-10">
               Que vous ayez besoin d'un diagnostic, d'un accompagnement en contrôle de gestion 
               ou d'une formation sur mesure, nous sommes là pour vous aider.
             </motion.p>

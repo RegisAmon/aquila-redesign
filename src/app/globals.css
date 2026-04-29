@@ -11,8 +11,9 @@
   --color-warm-white: #F8F6F3;
   --color-off-white: #FFFFFF;
   --color-text-primary: #1A1A1A;
-  --color-text-secondary: #6B7280;
+  --color-text-secondary: #4B5563;
   --color-text-muted: #9CA3AF;
+  --color-border: rgba(0, 0, 0, 0.08);
 
   /* Typography */
   --font-heading: 'Cormorant Garamond', Georgia, serif;
