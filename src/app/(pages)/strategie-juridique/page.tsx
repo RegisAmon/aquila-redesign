@@ -42,7 +42,7 @@ export default function StrategieJuridiquePage() {
       <Navbar />
       <main>
         {/* HERO */}
-        <section className="pt-20 md:pt-24 pb-20 bg-[var(--navy)] relative overflow-hidden">
+        <section className="pt-20 lg:pt-32 pb-16 lg:pb-24 bg-[var(--navy)] relative overflow-hidden">
           <div className="absolute inset-0 opacity-3">
             <div style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           </div>

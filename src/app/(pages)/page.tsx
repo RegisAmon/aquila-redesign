@@ -14,10 +14,9 @@ function useCountUp(end: number, duration: number = 2000) {
   const started = useRef(false);
 
   useEffect(() => {
-    // Reset to 0 on first view, then animate
-    setCount(0);
     if (isInView && !started.current) {
       started.current = true;
+      setCount(0); // reset only when section is visible
       let startTime: number;
       const animate = (currentTime: number) => {
         if (!startTime) startTime = currentTime;
@@ -134,7 +133,7 @@ export default function HomePage() {
           />
 
           {/* Content */}
-          <div className="container-custom relative z-10 pb-24">
+          <div className="container-custom relative z-10">
             <div className="max-w-4xl">
               {/* Pre-title */}
               <motion.div
