@@ -478,31 +478,30 @@ export default function HomePage() {
           </div>
 
           <motion.div
-            className="container-custom relative z-10 text-center"
+            className="container-custom relative z-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-100px' }}
             variants={stagger}
           >
-            <motion.span variants={fadeUp} className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">
-              Prêt à avancer ?
-            </motion.span>
-            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-6xl font-semibold text-white mt-8 mb-8">
-              Parlons de votre projet.
-            </motion.h2>
-            <motion.p variants={fadeUp} className="text-white/80 text-lg max-w-2xl mx-auto mb-14">
-              Que vous ayez besoin d'un diagnostic, d'un accompagnement en contrôle de gestion 
-              ou d'une formation sur mesure, nous sommes là pour vous aider.
-            </motion.p>
-            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-gold text-base">
-                Prendre rendez-vous
-                <ArrowRight size={18} />
-              </Link>
-              <a href="tel:+33752243929" className="btn-primary text-base">
-                (+33) 07 52 24 39 29
-              </a>
-            </motion.div>
+            <div className="max-w-3xl mx-auto text-center">
+              <motion.span variants={fadeUp} className="text-[#B8860B] text-sm uppercase tracking-[0.4em] font-semibold">
+                Prêt à avancer ?
+              </motion.span>
+              <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-6xl font-semibold text-white mt-8 mb-10">
+                Parlons de votre projet.
+              </motion.h2>
+              <motion.p variants={fadeUp} className="text-white/80 text-lg max-w-2xl mx-auto mb-14 leading-relaxed">
+                Que vous ayez besoin d'un diagnostic, d'un accompagnement en contrôle de gestion 
+                ou d'une formation sur mesure, nous sommes là pour vous aider.
+              </motion.p>
+              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="btn-gold text-base">
+                  Prendre rendez-vous
+                  <ArrowRight size={18} />
+                </Link>
+              </motion.div>
+            </div>
           </motion.div>
         </section>
       </main>
